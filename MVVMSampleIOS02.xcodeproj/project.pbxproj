@@ -13,9 +13,11 @@
 		3824338125401AC500068338 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3824337F25401AC500068338 /* Main.storyboard */; };
 		3824338325401AC700068338 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3824338225401AC700068338 /* Assets.xcassets */; };
 		3824338625401AC700068338 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3824338425401AC700068338 /* LaunchScreen.storyboard */; };
+		FA1D9D0F2C764FF8F513D7A9 /* Pods_MVVMSampleIOS02.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E69B3A2DE14426225FB35592 /* Pods_MVVMSampleIOS02.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		322EF75DD871757DC52D7355 /* Pods-MVVMSampleIOS02.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMSampleIOS02.release.xcconfig"; path = "Target Support Files/Pods-MVVMSampleIOS02/Pods-MVVMSampleIOS02.release.xcconfig"; sourceTree = "<group>"; };
 		3824337625401AC500068338 /* MVVMSampleIOS02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMSampleIOS02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3824337925401AC500068338 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3824337B25401AC500068338 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		3824338225401AC700068338 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3824338525401AC700068338 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3824338725401AC700068338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6911CC9BEA9E6E582E4A0573 /* Pods-MVVMSampleIOS02.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMSampleIOS02.debug.xcconfig"; path = "Target Support Files/Pods-MVVMSampleIOS02/Pods-MVVMSampleIOS02.debug.xcconfig"; sourceTree = "<group>"; };
+		E69B3A2DE14426225FB35592 /* Pods_MVVMSampleIOS02.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMSampleIOS02.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1D9D0F2C764FF8F513D7A9 /* Pods_MVVMSampleIOS02.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				3824337825401AC500068338 /* MVVMSampleIOS02 */,
 				3824337725401AC500068338 /* Products */,
+				D89F2090B8E7C17DE4B168F0 /* Pods */,
+				D0DC609E211AB41321A87C7C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = MVVMSampleIOS02;
 			sourceTree = "<group>";
 		};
+		D0DC609E211AB41321A87C7C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E69B3A2DE14426225FB35592 /* Pods_MVVMSampleIOS02.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D89F2090B8E7C17DE4B168F0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6911CC9BEA9E6E582E4A0573 /* Pods-MVVMSampleIOS02.debug.xcconfig */,
+				322EF75DD871757DC52D7355 /* Pods-MVVMSampleIOS02.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3824338A25401AC700068338 /* Build configuration list for PBXNativeTarget "MVVMSampleIOS02" */;
 			buildPhases = (
+				130DEA8005D8451C93CD7CA4 /* [CP] Check Pods Manifest.lock */,
 				3824337225401AC500068338 /* Sources */,
 				3824337325401AC500068338 /* Frameworks */,
 				3824337425401AC500068338 /* Resources */,
+				CFCACB130B5076EC0435C240 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		130DEA8005D8451C93CD7CA4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MVVMSampleIOS02-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFCACB130B5076EC0435C240 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MVVMSampleIOS02/Pods-MVVMSampleIOS02-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MVVMSampleIOS02/Pods-MVVMSampleIOS02-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MVVMSampleIOS02/Pods-MVVMSampleIOS02-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3824337225401AC500068338 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		3824338B25401AC700068338 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6911CC9BEA9E6E582E4A0573 /* Pods-MVVMSampleIOS02.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +369,7 @@
 		};
 		3824338C25401AC700068338 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 322EF75DD871757DC52D7355 /* Pods-MVVMSampleIOS02.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
