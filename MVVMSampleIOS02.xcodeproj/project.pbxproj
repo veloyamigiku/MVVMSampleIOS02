@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		3824338125401AC500068338 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3824337F25401AC500068338 /* Main.storyboard */; };
 		3824338325401AC700068338 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3824338225401AC700068338 /* Assets.xcassets */; };
 		3824338625401AC700068338 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3824338425401AC700068338 /* LaunchScreen.storyboard */; };
+		388860D42542AC4A006F039E /* HttpGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388860D32542AC4A006F039E /* HttpGet.swift */; };
 		FA1D9D0F2C764FF8F513D7A9 /* Pods_MVVMSampleIOS02.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E69B3A2DE14426225FB35592 /* Pods_MVVMSampleIOS02.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		3824338225401AC700068338 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3824338525401AC700068338 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3824338725401AC700068338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		388860D32542AC4A006F039E /* HttpGet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpGet.swift; sourceTree = "<group>"; };
 		6911CC9BEA9E6E582E4A0573 /* Pods-MVVMSampleIOS02.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMSampleIOS02.debug.xcconfig"; path = "Target Support Files/Pods-MVVMSampleIOS02/Pods-MVVMSampleIOS02.debug.xcconfig"; sourceTree = "<group>"; };
 		E69B3A2DE14426225FB35592 /* Pods_MVVMSampleIOS02.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMSampleIOS02.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -70,6 +72,7 @@
 				3824338225401AC700068338 /* Assets.xcassets */,
 				3824338425401AC700068338 /* LaunchScreen.storyboard */,
 				3824338725401AC700068338 /* Info.plist */,
+				388860D32542AC4A006F039E /* HttpGet.swift */,
 			);
 			path = MVVMSampleIOS02;
 			sourceTree = "<group>";
@@ -88,7 +91,6 @@
 				6911CC9BEA9E6E582E4A0573 /* Pods-MVVMSampleIOS02.debug.xcconfig */,
 				322EF75DD871757DC52D7355 /* Pods-MVVMSampleIOS02.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -209,6 +211,7 @@
 			files = (
 				3824337E25401AC500068338 /* ViewController.swift in Sources */,
 				3824337A25401AC500068338 /* AppDelegate.swift in Sources */,
+				388860D42542AC4A006F039E /* HttpGet.swift in Sources */,
 				3824337C25401AC500068338 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

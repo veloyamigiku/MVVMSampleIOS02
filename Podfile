@@ -7,5 +7,7 @@ target 'MVVMSampleIOS02' do
 
   # Pods for MVVMSampleIOS02
   pod 'SwiftyJSON'
+  pod 'RxSwift'
+  pod 'RxRelay'
 
 end
