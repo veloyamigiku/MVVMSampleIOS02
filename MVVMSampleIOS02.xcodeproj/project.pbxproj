@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35402EDD254855DF00C85312 /* CustomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35402EDC254855DE00C85312 /* CustomData.swift */; };
+		35402EDF2548562E00C85312 /* SectionOfCustomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35402EDE2548562E00C85312 /* SectionOfCustomData.swift */; };
 		3824337A25401AC500068338 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3824337925401AC500068338 /* AppDelegate.swift */; };
 		3824337C25401AC500068338 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3824337B25401AC500068338 /* SceneDelegate.swift */; };
 		3824337E25401AC500068338 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3824337D25401AC500068338 /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		322EF75DD871757DC52D7355 /* Pods-MVVMSampleIOS02.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMSampleIOS02.release.xcconfig"; path = "Target Support Files/Pods-MVVMSampleIOS02/Pods-MVVMSampleIOS02.release.xcconfig"; sourceTree = "<group>"; };
+		35402EDC254855DE00C85312 /* CustomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomData.swift; sourceTree = "<group>"; };
+		35402EDE2548562E00C85312 /* SectionOfCustomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionOfCustomData.swift; sourceTree = "<group>"; };
 		3824337625401AC500068338 /* MVVMSampleIOS02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMSampleIOS02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3824337925401AC500068338 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3824337B25401AC500068338 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +77,8 @@
 				3824338425401AC700068338 /* LaunchScreen.storyboard */,
 				3824338725401AC700068338 /* Info.plist */,
 				388860D32542AC4A006F039E /* HttpGet.swift */,
+				35402EDC254855DE00C85312 /* CustomData.swift */,
+				35402EDE2548562E00C85312 /* SectionOfCustomData.swift */,
 			);
 			path = MVVMSampleIOS02;
 			sourceTree = "<group>";
@@ -212,6 +218,8 @@
 				3824337E25401AC500068338 /* ViewController.swift in Sources */,
 				3824337A25401AC500068338 /* AppDelegate.swift in Sources */,
 				388860D42542AC4A006F039E /* HttpGet.swift in Sources */,
+				35402EDF2548562E00C85312 /* SectionOfCustomData.swift in Sources */,
+				35402EDD254855DF00C85312 /* CustomData.swift in Sources */,
 				3824337C25401AC500068338 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

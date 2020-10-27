@@ -9,5 +9,6 @@ target 'MVVMSampleIOS02' do
   pod 'SwiftyJSON'
   pod 'RxSwift'
   pod 'RxRelay'
+  pod 'RxDataSources'
 
 end

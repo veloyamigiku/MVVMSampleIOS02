@@ -9,15 +9,45 @@
 import UIKit
 import SwiftyJSON
 import RxSwift
+import RxDataSources
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate {
     
     private var disposeBag: DisposeBag!
+    private var dataSource: RxTableViewSectionedReloadDataSource<SectionOfCustomData>!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         disposeBag = DisposeBag()
+        
+        tableView.rx.setDelegate(self).disposed(by: disposeBag)
+        
+        dataSource = RxTableViewSectionedReloadDataSource<SectionOfCustomData>(configureCell: {(ds: TableViewSectionedDataSource<SectionOfCustomData>, tableView: UITableView, indexPath: IndexPath, model: CustomData) -> UITableViewCell in
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+            cell.textLabel?.text = model.str
+            return cell
+        })
+        dataSource.titleForHeaderInSection = {ds, index in
+            return ds.sectionModels[index].header
+        }
+        
+        let sections = [
+            SectionOfCustomData(header: "First section", items: [
+                CustomData(str: "zero"),
+                CustomData(str: "one")
+            ]),
+            SectionOfCustomData(header: "Second section", items: [
+                CustomData(str: "two"),
+                CustomData(str: "three")
+            ])
+        ]
+        
+        Observable.just(sections)
+            .bind(to: tableView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
+        
         
         let httpGet = HttpGet()
         httpGet
