@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITableViewDelegate {
     
     private var disposeBag: DisposeBag!
     private var dataSource: RxTableViewSectionedReloadDataSource<SectionOfCustomData>!
+    private var viewModel: ViewModel!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -29,10 +30,17 @@ class ViewController: UIViewController, UITableViewDelegate {
             cell.textLabel?.text = model.str
             return cell
         })
-        dataSource.titleForHeaderInSection = {ds, index in
+        /*dataSource.titleForHeaderInSection = {ds, index in
             return ds.sectionModels[index].header
-        }
+        }*/
         
+        viewModel = ViewModel()
+        viewModel.getItem()
+        viewModel.item()
+            .bind(to: tableView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
+        
+        /*
         let sections = [
             SectionOfCustomData(header: "First section", items: [
                 CustomData(str: "zero"),
@@ -47,9 +55,10 @@ class ViewController: UIViewController, UITableViewDelegate {
         Observable.just(sections)
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
+        */
         
         
-        let httpGet = HttpGet()
+        /*let httpGet = HttpGet()
         httpGet
             .exec(
                 url: "https://shopping.yahooapis.jp/ShoppingWebService/V3/itemSearch",
@@ -61,13 +70,24 @@ class ViewController: UIViewController, UITableViewDelegate {
             .subscribe(onNext: { (data) in
                 do {
                     let json = try JSON(data: data)
-                    print(json)
+                    //print(json)
                 } catch let jsonError {
                     print(jsonError)
                 }
             })
             .disposed(by: disposeBag)
+        */
     }
+    /*
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        print(indexPath)
+        if (indexPath.row == 1) {
+            print("end")
+        }
+        
+    }
+    */
+    //func scrollViewDidScroll
 
 
 }
