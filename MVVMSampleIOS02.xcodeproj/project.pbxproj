@@ -19,7 +19,9 @@
 		3824338125401AC500068338 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3824337F25401AC500068338 /* Main.storyboard */; };
 		3824338325401AC700068338 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3824338225401AC700068338 /* Assets.xcassets */; };
 		3824338625401AC700068338 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3824338425401AC700068338 /* LaunchScreen.storyboard */; };
+		382AD6EA25776CB9009DFE24 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382AD6E925776CB9009DFE24 /* CollectionViewCell.swift */; };
 		388860D42542AC4A006F039E /* HttpGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388860D32542AC4A006F039E /* HttpGet.swift */; };
+		38CF0B3425776F3200482FC9 /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CF0B3325776F3200482FC9 /* ViewController4.swift */; };
 		FA1D9D0F2C764FF8F513D7A9 /* Pods_MVVMSampleIOS02.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E69B3A2DE14426225FB35592 /* Pods_MVVMSampleIOS02.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +41,9 @@
 		3824338225401AC700068338 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3824338525401AC700068338 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3824338725401AC700068338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		382AD6E925776CB9009DFE24 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		388860D32542AC4A006F039E /* HttpGet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpGet.swift; sourceTree = "<group>"; };
+		38CF0B3325776F3200482FC9 /* ViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
 		6911CC9BEA9E6E582E4A0573 /* Pods-MVVMSampleIOS02.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMSampleIOS02.debug.xcconfig"; path = "Target Support Files/Pods-MVVMSampleIOS02/Pods-MVVMSampleIOS02.debug.xcconfig"; sourceTree = "<group>"; };
 		E69B3A2DE14426225FB35592 /* Pods_MVVMSampleIOS02.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMSampleIOS02.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -91,6 +95,8 @@
 				358F83FB25580CA00097BA9C /* ViewController2.swift */,
 				358F83FD25580DA10097BA9C /* CustomView.swift */,
 				35D2F5632562AFE100504ACF /* ViewController3.swift */,
+				382AD6E925776CB9009DFE24 /* CollectionViewCell.swift */,
+				38CF0B3325776F3200482FC9 /* ViewController4.swift */,
 			);
 			path = MVVMSampleIOS02;
 			sourceTree = "<group>";
@@ -234,9 +240,11 @@
 				358F83FE25580DA10097BA9C /* CustomView.swift in Sources */,
 				388860D42542AC4A006F039E /* HttpGet.swift in Sources */,
 				35402EDF2548562E00C85312 /* SectionOfCustomData.swift in Sources */,
+				38CF0B3425776F3200482FC9 /* ViewController4.swift in Sources */,
 				35402EDD254855DF00C85312 /* CustomData.swift in Sources */,
 				3824337C25401AC500068338 /* SceneDelegate.swift in Sources */,
 				35A552E12550276F00ECDC7E /* ViewModel.swift in Sources */,
+				382AD6EA25776CB9009DFE24 /* CollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
