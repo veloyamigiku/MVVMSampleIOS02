@@ -8,8 +8,33 @@
 
 import UIKit
 
-class ViewController3: UIViewController {
-
+class ViewController3: UIViewController, UICollectionViewDataSource {
+    
+    private let colors: [UIColor] = [
+        UIColor.black,
+        UIColor.blue,
+        UIColor.brown,
+        UIColor.cyan,
+        UIColor.darkGray,
+        UIColor.darkText,
+        UIColor.gray,
+        UIColor.green,
+        UIColor.lightGray,
+        UIColor.orange,
+        UIColor.red]
+    private let colorNames: [String] = [
+        "black",
+        "blue",
+        "brown",
+        "cyan",
+        "darkGray",
+        "darkText",
+        "gray",
+        "green",
+        "lightGray",
+        "orange",
+        "red"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,17 +82,35 @@ class ViewController3: UIViewController {
         stackView.addArrangedSubview(customView5)
         customView5.translatesAutoresizingMaskIntoConstraints = false
         customView5.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.itemSize = CGSize(width: 120, height: 120)
+        layout.minimumLineSpacing = 10
+        let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.backgroundColor = .white
+        collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: "CollectionViewCell")
+        collectionView.dataSource = self
+        collectionView.layer.borderColor = UIColor.black.cgColor
+        collectionView.layer.borderWidth = 1
+        stackView.addArrangedSubview(collectionView)
+        collectionView.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
+        collectionView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return colors.count
     }
-    */
-
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
+        
+        cell.label.backgroundColor = colors[indexPath.item]
+        cell.name.text = colorNames[indexPath.item]
+        
+        return cell
+    }
+    
 }
