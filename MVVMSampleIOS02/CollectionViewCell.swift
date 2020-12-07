@@ -15,6 +15,10 @@ class CollectionViewCell: UICollectionViewCell {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         
         self.layer.borderWidth = 1.0
         self.layer.borderColor = UIColor.black.cgColor
@@ -26,7 +30,6 @@ class CollectionViewCell: UICollectionViewCell {
         name = UILabel()
         name.translatesAutoresizingMaskIntoConstraints = false
         addSubview(name)
-        
     }
     
     override func layoutSubviews() {
