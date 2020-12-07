@@ -38,15 +38,34 @@ class ViewController4: UIViewController, UICollectionViewDataSource {
     private var giveColor: UIColor = UIColor.black
     private var giveColorName: String = "black"
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    private var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let margins = view.safeAreaLayoutGuide
+        
         // Do any additional setup after loading the view.
+        let layout = UICollectionViewFlowLayout()
+        // スクロール方向を設定する。
+        layout.scrollDirection = .horizontal
+        // スクロール方向の間隔を設定する。
+        layout.minimumLineSpacing = 10
+        // セルサイズを設定する。
+        layout.itemSize = CGSize(width: 120, height: 120)
+        collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        // 背景色はデフォルトで黒なので、白に設定する。
+        collectionView.backgroundColor = UIColor.white
+        collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: "CollectionViewCell")
         collectionView.dataSource = self
         collectionView.layer.borderColor = UIColor.black.cgColor
         collectionView.layer.borderWidth = 1.0
+        self.view.addSubview(collectionView)
+        collectionView.topAnchor.constraint(equalTo: margins.topAnchor, constant: 5).isActive = true
+        collectionView.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 5).isActive = true
+        collectionView.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -5).isActive = true
+        collectionView.heightAnchor.constraint(equalToConstant: 200).isActive = true
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
