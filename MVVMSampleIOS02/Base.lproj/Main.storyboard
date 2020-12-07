@@ -90,38 +90,8 @@
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="216-dh-dCw">
                                             <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEf-Z1-r9q">
-                                                    <rect key="frame" x="5" y="5" width="110" height="60"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="60" id="bdM-GE-d5C"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8R-MG-LaP">
-                                                    <rect key="frame" x="5" y="70" width="110" height="45"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="rEf-Z1-r9q" firstAttribute="leading" secondItem="216-dh-dCw" secondAttribute="leading" constant="5" id="LEQ-jO-gp1"/>
-                                                <constraint firstItem="y8R-MG-LaP" firstAttribute="leading" secondItem="216-dh-dCw" secondAttribute="leading" constant="5" id="XKC-ct-ORg"/>
-                                                <constraint firstItem="rEf-Z1-r9q" firstAttribute="top" secondItem="216-dh-dCw" secondAttribute="top" constant="5" id="Z4f-w3-Yvb"/>
-                                                <constraint firstItem="y8R-MG-LaP" firstAttribute="top" secondItem="rEf-Z1-r9q" secondAttribute="bottom" constant="5" id="deC-jD-Hgq"/>
-                                                <constraint firstAttribute="trailing" secondItem="y8R-MG-LaP" secondAttribute="trailing" constant="5" id="kFZ-Bz-eYm"/>
-                                                <constraint firstAttribute="bottom" secondItem="y8R-MG-LaP" secondAttribute="bottom" constant="5" id="tlS-tC-3Qg"/>
-                                                <constraint firstAttribute="trailing" secondItem="rEf-Z1-r9q" secondAttribute="trailing" constant="5" id="txZ-bK-JAW"/>
-                                            </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="120" height="120"/>
-                                        <connections>
-                                            <outlet property="label" destination="rEf-Z1-r9q" id="vD4-f8-iOc"/>
-                                            <outlet property="name" destination="y8R-MG-LaP" id="gAA-97-s0N"/>
-                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
