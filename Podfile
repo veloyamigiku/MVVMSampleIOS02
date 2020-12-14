@@ -10,5 +10,6 @@ target 'MVVMSampleIOS02' do
   pod 'RxSwift'
   pod 'RxRelay'
   pod 'RxDataSources'
+  pod 'AlamofireImage'
 
 end
